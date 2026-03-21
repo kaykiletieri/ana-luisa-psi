@@ -1,0 +1,30 @@
+// Estado inicial — invisível e deslocado
+[appScrollAnimate] {
+    opacity: 0;
+    transform: translateY(2rem);
+    transition:
+        opacity var(--transition-slow),
+        transform var(--transition-slow);
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Delay para animar itens em sequência (ex: cards)
+.delay-1 {
+    transition-delay: 0.1s;
+}
+
+.delay-2 {
+    transition-delay: 0.2s;
+}
+
+.delay-3 {
+    transition-delay: 0.3s;
+}
+
+.delay-4 {
+    transition-delay: 0.4s;
+}

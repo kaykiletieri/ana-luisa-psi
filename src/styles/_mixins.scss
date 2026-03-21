@@ -1,0 +1,37 @@
+// Mobile-first breakpoints
+@mixin sm {
+    @media (min-width: 640px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: 1280px) {
+        @content;
+    }
+}
+
+// Container centralizado
+@mixin container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding-inline: var(--section-pad-x);
+}
+
+// Seção padrão
+@mixin section {
+    padding: var(--section-pad-y) var(--section-pad-x);
+}
