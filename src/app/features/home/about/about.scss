@@ -39,17 +39,21 @@
 
     &__image-wrapper {
         width: 100%;
-        max-width: 280px;
+        max-width: 260px;
+        background: var(--color-bg-card);
+        border-radius: var(--border-radius);
+        padding: var(--spacing-sm);
 
         @include m.md {
-            max-width: 320px;
+            max-width: 300px;
         }
     }
 
     &__image {
         width: 100%;
-        aspect-ratio: 3 / 4;
+        height: 280px;
         object-fit: cover;
-        border-radius: var(--border-radius);
+        object-position: center top;
+        border-radius: var(--border-radius-sm);
     }
 }
