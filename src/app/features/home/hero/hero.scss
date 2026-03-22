@@ -12,17 +12,20 @@
     &__overlay {
         position: absolute;
         inset: 0;
+        /*
         background: linear-gradient(to right,
                 rgba(107, 15, 26, 0.75) 0%,
                 rgba(107, 15, 26, 0.55) 50%,
                 rgba(107, 15, 26, 0.25) 100%);
+        */
+        background: var(--color-primary);
     }
 
     &__content {
         position: relative;
         z-index: 1;
         padding: var(--spacing-xl) var(--spacing-lg);
-        padding-top: calc(var(--spacing-xl) + 4.5rem); // compensa o navbar fixo
+        padding-top: calc(var(--spacing-xl) + 4.5rem);
         max-width: 580px;
 
         @include m.xl {

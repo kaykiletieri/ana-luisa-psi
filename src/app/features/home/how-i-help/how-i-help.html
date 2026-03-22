@@ -1,0 +1,22 @@
+<section class="how-i-help" id="como-ajudar">
+    <div class="how-i-help__container">
+
+        <h2 class="how-i-help__title" appScrollAnimate>
+            Como posso te ajudar
+        </h2>
+
+        <div class="how-i-help__list">
+            @for (item of items; track item.title; let i = $index) {
+            <div class="how-i-help__card" [class.how-i-help__card--alt]="i % 2 !== 0" appScrollAnimate
+                [ngClass]="'delay-' + (i + 1)">
+                <lucide-icon [img]="item.icon" [size]="22" class="how-i-help__icon"></lucide-icon>
+                <div class="how-i-help__card-content">
+                    <h3 class="how-i-help__card-title">{{ item.title }}</h3>
+                    <p class="how-i-help__card-description">{{ item.description }}</p>
+                </div>
+            </div>
+            }
+        </div>
+
+    </div>
+</section>
