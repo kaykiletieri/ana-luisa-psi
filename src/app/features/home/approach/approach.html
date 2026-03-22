@@ -1,0 +1,28 @@
+<section class="approach" id="abordagem">
+    <div class="approach__container">
+
+        <h2 class="approach__title" appScrollAnimate>
+            Abordagem Fenomenológica-Existencial
+        </h2>
+
+        <p class="approach__description" appScrollAnimate>
+            Esta abordagem nos convida a olhar para a vida como ela se revela, sem preconceitos.
+            Aqui, você não é um diagnóstico ou um conjunto de sintomas, mas um ser único que está
+            constantemente se fazendo, escolhendo e criando significados em um mundo compartilhado.
+        </p>
+
+        <div class="approach__pillars" appScrollAnimate>
+            @for (pillar of pillars; track pillar; let i = $index) {
+            <div class="approach__pillar" [ngClass]="'delay-' + (i + 1)">
+                <span class="approach__pillar-dot"></span>
+                <span>{{ pillar }}</span>
+            </div>
+            }
+        </div>
+
+        <button class="approach__cta" appScrollAnimate (click)="scrollToHowItWorks()">
+            Entenda como funciona
+        </button>
+
+    </div>
+</section>
