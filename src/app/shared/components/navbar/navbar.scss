@@ -1,0 +1,52 @@
+@use '../../../../styles/mixins' as m;
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: var(--color-bg);
+    transition: box-shadow var(--transition-normal);
+
+    &--scrolled {
+        box-shadow: 0 1px 20px rgba(107, 15, 26, 0.08);
+    }
+
+    &__container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 var(--spacing-md);
+        height: 4.5rem;
+
+        @include m.xl {
+            padding: 0 var(--spacing-xl);
+        }
+    }
+
+    &__brand {
+        font-family: var(--font-heading);
+        font-size: var(--text-xl);
+        color: var(--color-primary);
+        letter-spacing: 0.02em;
+    }
+
+    &__cta {
+        font-family: var(--font-body);
+        font-size: var(--text-sm);
+        font-weight: 500;
+        padding: 0.6rem 1.4rem;
+        border-radius: 2rem;
+        background: var(--color-primary);
+        color: var(--color-text-light);
+        transition: background var(--transition-fast),
+            transform var(--transition-fast);
+
+        &:hover {
+            background: var(--color-primary-dark);
+            transform: translateY(-1px);
+        }
+    }
+}
