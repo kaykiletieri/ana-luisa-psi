@@ -1,0 +1,30 @@
+<footer class="footer" id="contato">
+    <div class="footer__container">
+
+        <div class="footer__identity" appScrollAnimate>
+            <h3 class="footer__name">Ana Luísa Almeida</h3>
+            <p class="footer__crp">Psicóloga Clínica | CRP 00/00000</p>
+        </div>
+
+        <div class="footer__contacts" appScrollAnimate>
+            <a [href]="contact.phoneHref" class="footer__contact-item">
+                <lucide-icon [img]="Phone" [size]="18"></lucide-icon>
+                <span>{{ contact.phone }}</span>
+            </a>
+            <a [href]="contact.emailHref" class="footer__contact-item">
+                <lucide-icon [img]="Mail" [size]="18"></lucide-icon>
+                <span>{{ contact.email }}</span>
+            </a>
+            <a [href]="contact.instagramHref" target="_blank" rel="noopener noreferrer" class="footer__contact-item">
+                <lucide-icon [img]="Instagram" [size]="18"></lucide-icon>
+                <span>{{ contact.instagram }}</span>
+            </a>
+        </div>
+
+        <hr class="footer__divider" />
+
+        <p class="footer__copy">
+            © {{ currentYear }} Ana Luísa Almeida. Todos os direitos reservados.
+        </p>
+    </div>
+</footer>

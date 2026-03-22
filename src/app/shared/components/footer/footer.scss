@@ -1,0 +1,78 @@
+@use '../../../../styles/mixins' as m;
+
+.footer {
+    background: var(--color-bg);
+    padding: var(--spacing-2xl) 0 var(--spacing-xl);
+
+    &__container {
+        @include m.container;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+
+    &__identity {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+
+    &__name {
+        font-family: var(--font-heading);
+        font-size: var(--text-2xl);
+        color: var(--color-primary);
+        font-weight: 400;
+    }
+
+    &__crp {
+        font-size: var(--text-sm);
+        color: var(--color-text-muted);
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        width: 100%;
+        max-width: 400px;
+    }
+
+    &__contact-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--spacing-sm);
+        padding: var(--spacing-sm) var(--spacing-md);
+        border-radius: var(--border-radius);
+        border: 1px solid rgba(107, 15, 26, 0.12);
+        color: var(--color-text-muted);
+        font-size: var(--text-sm);
+        transition: border-color var(--transition-fast),
+            color var(--transition-fast);
+
+        lucide-icon {
+            color: var(--color-primary);
+            flex-shrink: 0;
+        }
+
+        &:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+    }
+
+    &__divider {
+        width: 100%;
+        max-width: 400px;
+        border: none;
+        border-top: 1px solid rgba(107, 15, 26, 0.1);
+    }
+
+    &__copy {
+        font-size: var(--text-xs);
+        color: var(--color-text-muted);
+        opacity: 0.7;
+    }
+}
