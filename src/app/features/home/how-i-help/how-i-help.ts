@@ -26,12 +26,12 @@ export class HowIHelp {
     {
       icon: Search,
       title: 'Explorar suas experiências',
-      description: 'Explorar e compreender suas experiências de forma mais profunda, olhando com mais cuidado para aquilo que você está vivendo.'
+      description: 'Explorar e compreender suas experiências de forma mais profunda.'
     },
     {
       icon: Heart,
       title: 'Dar sentido ao que você sente',
-      description: 'Dar sentido a sentimentos que, muitas vezes, aparecem de forma confusa ou intensa, sem julgamentos.'
+      description: 'Dar sentido a sentimentos que, muitas vezes, aparecem de forma confusa ou intensa.'
     },
     {
       icon: GitBranch,
