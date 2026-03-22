@@ -11,10 +11,10 @@ import { ScrollAnimateDirective } from '../../../core/directives/scroll-animate.
 })
 export class Approach {
   pillars: string[] = [
-    'Investigação da sua experiência vivida',
-    'Liberdade de ser quem você é',
-    'Responsabilidade pelas suas escolhas',
-    'Construção de sentido existencial'
+    'Compreensão da experiência tal como ela se apresenta',
+    'Acolhimento da singularidade do seu modo de existir',
+    'Implicação nas próprias escolhas e modos de viver',
+    'Construção de sentido a partir da sua vivência'
   ];
 
   scrollToHowItWorks(): void {

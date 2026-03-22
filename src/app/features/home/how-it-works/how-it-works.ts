@@ -22,7 +22,7 @@ export class HowItWorks {
       number: '01',
       icon: Calendar,
       title: 'Agendamento',
-      description: 'Entre em contato por WhatsApp ou formulário e escolha o melhor horário para você.'
+      description: 'Entre em contato por WhatsApp e escolha o melhor horário para você.'
     },
     {
       number: '02',
