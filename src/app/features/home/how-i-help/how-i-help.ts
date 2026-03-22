@@ -1,7 +1,7 @@
 import { CommonModule, NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { ScrollAnimateDirective } from '../../../core/directives/scroll-animate.directive';
-import { LucideAngularModule, Heart, Sprout, MessageCircle, Brain, Users } from 'lucide-angular';
+import { LucideAngularModule, Heart, Sprout, Users, Search, GitBranch } from 'lucide-angular';
 
 interface HelpItem {
   icon: any;
@@ -18,16 +18,35 @@ interface HelpItem {
 export class HowIHelp {
   readonly Heart = Heart;
   readonly Sprout = Sprout;
-  readonly MessageCircle = MessageCircle;
-  readonly Brain = Brain;
   readonly Users = Users;
+  readonly Search = Search;
+  readonly GitBranch = GitBranch;
 
   items: HelpItem[] = [
-    { icon: Heart, title: 'Acolhimento da sua experiência', description: 'Um espaço onde você pode ser verdadeiramente ouvido, sem julgamentos, explorando suas vivências e emoções de forma genuína e respeitosa.' },
-    { icon: Sprout, title: 'Descoberta de novos significados', description: 'Juntos, investigamos as questões que te movem, buscando compreender o sentido das suas experiências e construir caminhos mais autênticos.' },
-    { icon: MessageCircle, title: 'Diálogo profundo e reflexivo', description: 'Através de conversas que vão além da superfície, exploramos sua história, suas escolhas e possibilidades de ser no mundo.' },
-    { icon: Brain, title: 'Compreensão da sua totalidade', description: 'Você não é apenas seus sintomas. Aqui, olhamos para a pessoa inteira, suas relações, contextos e a forma única como você habita o mundo.' },
-    { icon: Users, title: 'Presença genuína e encontro', description: 'Uma relação terapêutica baseada na presença verdadeira, onde nos encontramos de forma horizontal para caminhar juntos.' },
-    { icon: Sprout, title: 'Liberdade e responsabilidade', description: 'Explorar suas possibilidades de escolha, reconhecendo sua liberdade e responsabilidade na construção da sua própria existência.' }
+    {
+      icon: Search,
+      title: 'Explorar suas experiências',
+      description: 'Explorar e compreender suas experiências de forma mais profunda, olhando com mais cuidado para aquilo que você está vivendo.'
+    },
+    {
+      icon: Heart,
+      title: 'Dar sentido ao que você sente',
+      description: 'Dar sentido a sentimentos que, muitas vezes, aparecem de forma confusa ou intensa, sem julgamentos.'
+    },
+    {
+      icon: GitBranch,
+      title: 'Refletir sobre seus caminhos',
+      description: 'Refletir sobre escolhas e os caminhos possíveis, construindo sentido de forma conjunta e respeitosa.'
+    },
+    {
+      icon: Users,
+      title: 'Reconhecer seus padrões',
+      description: 'Reconhecer padrões de relação e formas de se posicionar no mundo, considerando sua história e seu contexto.'
+    },
+    {
+      icon: Sprout,
+      title: 'Ampliar sua consciência',
+      description: 'Ampliar sua consciência sobre si mesmo e sua forma de existir, favorecendo um modo de estar no mundo mais coerente com o que faz sentido para você.'
+    }
   ];
 }

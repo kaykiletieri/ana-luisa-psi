@@ -5,6 +5,15 @@
             Como posso te ajudar
         </h2>
 
+        <div class="how-i-help__intro" appScrollAnimate>
+            <p>
+                O acompanhamento psicológico é um espaço de escuta e compreensão da sua experiência
+                tal como ela se apresenta. A partir de uma perspectiva fenomenológico-existencial,
+                o trabalho não se orienta por respostas prontas, mas pela construção conjunta de sentido.
+            </p>
+            <p>Durante o processo terapêutico, você poderá:</p>
+        </div>
+
         <div class="how-i-help__list">
             @for (item of items; track item.title; let i = $index) {
             <div class="how-i-help__card" [class.how-i-help__card--alt]="i % 2 !== 0" appScrollAnimate
@@ -16,6 +25,14 @@
                 </div>
             </div>
             }
+        </div>
+
+        <div class="how-i-help__outro" appScrollAnimate>
+            <p>
+                O objetivo é favorecer um modo de estar no mundo mais consciente, implicado e
+                coerente com aquilo que faz sentido para você. Cada processo terapêutico é único
+                e construído de acordo com a singularidade de quem busca o atendimento.
+            </p>
         </div>
 
     </div>
