@@ -1,0 +1,65 @@
+@use '../../../../styles/mixins' as m;
+
+.online-service {
+    background: var(--color-primary);
+    padding: var(--section-pad-y) 0;
+
+    &__container {
+        @include m.container;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+
+    &__icon-wrapper {
+        width: 4.5rem;
+        height: 4.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: var(--border-radius);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__icon {
+        color: var(--color-text-light);
+    }
+
+    &__title {
+        font-family: var(--font-heading);
+        font-size: var(--text-3xl);
+        color: var(--color-text-light);
+        max-width: 520px;
+
+        @include m.lg {
+            font-size: var(--text-4xl);
+        }
+    }
+
+    &__description {
+        font-size: var(--text-base);
+        color: var(--color-text-light);
+        opacity: 0.9;
+        max-width: 520px;
+        line-height: 1.9;
+    }
+
+    &__cta {
+        font-family: var(--font-body);
+        font-size: var(--text-sm);
+        font-weight: 500;
+        padding: 0.9rem 2.2rem;
+        border-radius: var(--border-radius);
+        background: var(--color-bg);
+        color: var(--color-primary);
+        transition: transform var(--transition-fast),
+            opacity var(--transition-fast);
+
+        &:hover {
+            transform: translateY(-2px);
+            opacity: 0.92;
+        }
+    }
+}
