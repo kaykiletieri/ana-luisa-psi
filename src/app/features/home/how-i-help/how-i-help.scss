@@ -1,0 +1,78 @@
+@use '../../../../styles/mixins' as m;
+
+.how-i-help {
+    background: var(--color-bg-secondary);
+    padding: var(--section-pad-y) 0;
+
+    &__container {
+        @include m.container;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-xl);
+    }
+
+    &__title {
+        font-family: var(--font-heading);
+        font-size: var(--text-3xl);
+        color: var(--color-primary);
+        text-align: center;
+
+        @include m.lg {
+            font-size: var(--text-4xl);
+        }
+    }
+
+    &__list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    &__card {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+        padding: var(--spacing-lg);
+        background: white;
+        border-radius: var(--border-radius);
+        box-shadow: 0 2px 12px rgba(107, 15, 26, 0.06);
+        transition: transform var(--transition-fast),
+            box-shadow var(--transition-fast);
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(107, 15, 26, 0.08);
+        }
+
+        &--alt {
+            background: var(--color-bg-card);
+        }
+    }
+
+    &__icon {
+        color: var(--color-primary);
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+
+    &__card-content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+
+    &__card-title {
+        font-family: var(--font-heading);
+        font-size: var(--text-xl);
+        color: var(--color-primary);
+        font-weight: 600;
+    }
+
+    &__card-description {
+        font-size: var(--text-sm);
+        color: var(--color-text-muted);
+        line-height: 1.8;
+    }
+}
