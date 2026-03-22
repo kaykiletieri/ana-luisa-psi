@@ -5,6 +5,14 @@
             Como funciona o atendimento
         </h2>
 
+        <div class="how-it-works__image-wrapper" appScrollAnimate>
+            <picture>
+                <source srcset="assets/images/about-photo1.webp" type="image/webp">
+                <img src="assets/images/about-photo1.webp" alt="Ana Luísa Almeida, Psicóloga Clínica"
+                    class="how-it-works__image" loading="lazy" width="300" height="280" />
+            </picture>
+        </div>
+
         <div class="how-it-works__card" appScrollAnimate>
             @for (step of steps; track step.number; let last = $last) {
             <div class="how-it-works__step">
