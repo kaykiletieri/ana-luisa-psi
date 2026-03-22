@@ -1,0 +1,30 @@
+<section class="how-it-works" id="como-funciona">
+    <div class="how-it-works__container">
+
+        <h2 class="how-it-works__title" appScrollAnimate>
+            Como funciona o atendimento
+        </h2>
+
+        <div class="how-it-works__card" appScrollAnimate>
+            @for (step of steps; track step.number; let last = $last) {
+            <div class="how-it-works__step">
+
+                <div class="how-it-works__step-left">
+                    <div class="how-it-works__step-number">{{ step.number }}</div>
+                    @if (!last) {
+                    <div class="how-it-works__step-line"></div>
+                    }
+                </div>
+
+                <div class="how-it-works__step-body">
+                    <lucide-icon [img]="step.icon" [size]="22" class="how-it-works__step-icon"></lucide-icon>
+                    <h3 class="how-it-works__step-title">{{ step.title }}</h3>
+                    <p class="how-it-works__step-description">{{ step.description }}</p>
+                </div>
+
+            </div>
+            }
+        </div>
+
+    </div>
+</section>
