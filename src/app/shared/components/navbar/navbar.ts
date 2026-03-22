@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 export class Navbar {
   isScrolled = signal(false);
 
-  private whatsappNumber = '5500000000000';
+  private whatsappNumber = '5535991949357';
   private whatsappMessage = 'Olá! Gostaria de agendar uma consulta.';
 
   @HostListener('window:scroll')
