@@ -3,3 +3,8 @@
 @use 'styles/typography';
 @use 'styles/mixins';
 @use 'styles/animations';
+
+html,
+body {
+    background-color: var(--color-primary);
+}

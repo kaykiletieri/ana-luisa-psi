@@ -1,8 +1,9 @@
 import { Component, signal } from '@angular/core';
+import { Navbar } from './shared/components/navbar/navbar';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [Navbar],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
