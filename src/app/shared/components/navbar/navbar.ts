@@ -1,17 +1,18 @@
 import { Component, HostListener, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Whatsapp } from '../../../core/services/whatsapp';
 
 @Component({
   selector: 'app-navbar',
   imports: [CommonModule],
+  standalone: true,
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
 export class Navbar {
   isScrolled = signal(false);
 
-  private whatsappNumber = '5535991949357';
-  private whatsappMessage = 'Olá! Gostaria de agendar uma consulta.';
+  constructor(private whatsapp: Whatsapp) { }
 
   @HostListener('window:scroll')
   onScroll(): void {
@@ -19,7 +20,6 @@ export class Navbar {
   }
 
   openWhatsApp(): void {
-    const message = encodeURIComponent(this.whatsappMessage);
-    window.open(`https://wa.me/${this.whatsappNumber}?text=${message}`, '_blank');
+    this.whatsapp.open();
   }
 }
