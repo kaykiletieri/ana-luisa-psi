@@ -1,7 +1,7 @@
 @use '../../../../styles/mixins' as m;
 
 .about {
-    background: var(--color-bg);
+    background: var(--color-bg-tertiary);
     padding: var(--section-pad-y) 0;
 
     &__container {

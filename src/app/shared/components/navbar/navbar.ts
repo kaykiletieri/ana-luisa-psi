@@ -22,4 +22,8 @@ export class Navbar {
   openWhatsApp(): void {
     this.whatsapp.open();
   }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
