@@ -1,6 +1,0 @@
-Contact: mailto:letieri.dev@gmail.com
-Contact: https://www.linkedin.com/in/kaykiletieri/
-Canonical: https://www.psianaluisaalmeida.com/.well-known/security.txt
-Preferred-Languages: pt-BR, en
-Expires: 2027-01-01T00:00:00.000Z
-Policy: https://github.com/kaykiletieri/ana-luisa-psi/blob/main/SECURITY.md
