@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { LucideAngularModule, Video } from 'lucide-angular';
 import { ScrollAnimateDirective } from '../../../core/directives/scroll-animate.directive';
 import { Whatsapp } from '../../../core/services/whatsapp';
@@ -9,6 +9,7 @@ import { Whatsapp } from '../../../core/services/whatsapp';
   imports: [ScrollAnimateDirective, LucideAngularModule],
   templateUrl: './online-service.html',
   styleUrl: './online-service.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class OnlineService {
   readonly Video = Video;

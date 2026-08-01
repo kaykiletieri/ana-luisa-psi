@@ -46,6 +46,26 @@
         line-height: 1.9;
     }
 
+    &__locations {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+        max-width: 720px;
+        margin-top: calc(var(--spacing-xs) * -1);
+    }
+
+    &__location {
+        font-family: var(--font-body);
+        font-size: var(--text-xs);
+        font-weight: 500;
+        color: var(--color-primary);
+        background: rgba(255, 255, 255, 0.92);
+        border-radius: 999px;
+        padding: 0.75rem 1rem;
+        line-height: 1.2;
+    }
+
     &__cta {
         font-family: var(--font-body);
         font-size: var(--text-sm);
