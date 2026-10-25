@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ScrollAnimateDirective } from '../../../core/directives/scroll-animate.directive';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-approach',
   standalone: true,
-  imports: [CommonModule, ScrollAnimateDirective],
+  imports: [CommonModule, ScrollAnimateDirective, RouterLink],
   templateUrl: './approach.html',
   styleUrl: './approach.scss',
 })
@@ -16,8 +17,4 @@ export class Approach {
     'Implicação nas próprias escolhas e modos de viver',
     'Construção de sentido a partir da sua vivência'
   ];
-
-  scrollToHowItWorks(): void {
-    document.getElementById('como-funciona')?.scrollIntoView({ behavior: 'smooth' });
-  }
 }

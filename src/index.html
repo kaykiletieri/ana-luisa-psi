@@ -46,6 +46,16 @@
   <link rel="preload" as="style"
     href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
   <link rel="preload" as="image" href="assets/images/hero-bg1.webp" type="image/webp">
+  <script>
+    (function () {
+      var redirect = sessionStorage.getItem('github-pages-redirect');
+      if (redirect) {
+        sessionStorage.removeItem('github-pages-redirect');
+        var url = window.location.origin + window.location.pathname.replace('index.html', '') + redirect;
+        window.history.replaceState(null, null, url);
+      }
+    })();
+  </script>
 </head>
 
 <body>

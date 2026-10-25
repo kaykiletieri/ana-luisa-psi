@@ -1,18 +1,19 @@
 import { Component, HostListener } from '@angular/core';
 import { ScrollAnimateDirective } from '../../../core/directives/scroll-animate.directive';
-import { Whatsapp } from '../../../core/services/whatsapp';
+import { RouterLink } from '@angular/router';
+import { WhatsappService } from '../../../core/services/whatsapp';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [ScrollAnimateDirective],
+  imports: [ScrollAnimateDirective, RouterLink],
   templateUrl: './hero.html',
   styleUrl: './hero.scss'
 })
 export class Hero {
   currentBg = 'assets/images/hero-bg4.webp';
 
-  constructor(private whatsapp: Whatsapp) { }
+  constructor(private whatsapp: WhatsappService) { }
 
   ngOnInit(): void {
     this.updateBg();
@@ -27,9 +28,5 @@ export class Hero {
 
   openWhatsApp(): void {
     this.whatsapp.open();
-  }
-
-  scrollToContact(): void {
-    document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
   }
 }

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { LucideAngularModule, Phone, Mail, Instagram, Linkedin } from 'lucide-angular';
 import { ScrollAnimateDirective } from '../../../core/directives/scroll-animate.directive';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [ScrollAnimateDirective, LucideAngularModule],
+  imports: [ScrollAnimateDirective, LucideAngularModule, RouterLink],
   templateUrl: './footer.html',
   styleUrl: './footer.scss',
 })
