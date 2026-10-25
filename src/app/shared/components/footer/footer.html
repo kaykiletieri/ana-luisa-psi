@@ -6,6 +6,15 @@
             <p class="footer__crp">Psicóloga Clínica | CRP 04/84744</p>
         </div>
 
+        <nav class="footer__nav" appScrollAnimate aria-label="Navegação do rodapé">
+            <a routerLink="/sobre" class="footer__nav-link">Sobre Mim</a>
+            <a routerLink="/atendimento-online" class="footer__nav-link">Atendimento Online</a>
+            <a routerLink="/atendimento-presencial" class="footer__nav-link">Atendimento Presencial</a>
+            <a routerLink="/abordagem" class="footer__nav-link">Abordagem</a>
+            <a routerLink="/como-funciona" class="footer__nav-link">Como Funciona</a>
+            <a routerLink="/agendar" class="footer__nav-link">Agendar</a>
+        </nav>
+
         <div class="footer__contacts" appScrollAnimate>
             <a [href]="contact.phoneHref" class="footer__contact-item">
                 <lucide-icon [img]="Phone" [size]="18"></lucide-icon>

@@ -17,6 +17,20 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link rel="preload" as="image" href="assets/images/hero-bg1.webp" type="image/webp">
+    <script>
+        (function () {
+            var pathSegments = window.location.pathname.split('/');
+            var projectIndex = pathSegments.indexOf('ana-luisa-psi');
+            if (projectIndex !== -1) {
+                pathSegments.splice(0, projectIndex + 1);
+            }
+            var path = pathSegments.join('/');
+            if (path && path !== 'index.html') {
+                sessionStorage.setItem('github-pages-redirect', path);
+            }
+            window.location.href = '/' + (pathSegments.slice(0, projectIndex + 1).join('/') || '') + '/index.html';
+        })();
+    </script>
 </head>
 
 <body>

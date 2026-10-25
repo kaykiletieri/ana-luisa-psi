@@ -1,6 +1,13 @@
 <header class="navbar" [class.navbar--scrolled]="isScrolled()">
     <div class="navbar__container">
-        <span class="navbar__brand" (click)="scrollToTop()">Ana Luísa Almeida</span>
-        <button class="navbar__cta" (click)="openWhatsApp()">Agendar</button>
+        <a routerLink="/" class="navbar__brand" aria-label="Início">Ana Luísa Almeida</a>
+        <nav class="navbar__nav" aria-label="Navegação principal">
+            <a routerLink="/sobre" routerLinkActive="navbar__link--active">Sobre</a>
+            <a routerLink="/atendimento-online" routerLinkActive="navbar__link--active">Online</a>
+            <a routerLink="/atendimento-presencial" routerLinkActive="navbar__link--active">Presencial</a>
+            <a routerLink="/abordagem" routerLinkActive="navbar__link--active">Abordagem</a>
+            <a routerLink="/como-funciona" routerLinkActive="navbar__link--active">Como Funciona</a>
+        </nav>
+        <a routerLink="/agendar" class="navbar__cta">Agendar</a>
     </div>
 </header>

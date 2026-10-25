@@ -1,10 +1,11 @@
 import { Component, HostListener, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Whatsapp } from '../../../core/services/whatsapp';
+import { RouterLink, RouterLinkActive } from '@angular/router';
+import { WhatsappService } from '../../../core/services/whatsapp';
 
 @Component({
   selector: 'app-navbar',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink, RouterLinkActive],
   standalone: true,
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
@@ -12,7 +13,7 @@ import { Whatsapp } from '../../../core/services/whatsapp';
 export class Navbar {
   isScrolled = signal(false);
 
-  constructor(private whatsapp: Whatsapp) { }
+  constructor(private whatsapp: WhatsappService) { }
 
   @HostListener('window:scroll')
   onScroll(): void {

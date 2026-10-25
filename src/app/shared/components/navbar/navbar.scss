@@ -18,6 +18,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: var(--spacing-lg);
         padding: 0 var(--spacing-md);
         height: 4.5rem;
 
@@ -27,11 +28,44 @@
     }
 
     &__brand {
-        cursor: pointer;
         font-family: var(--font-heading);
         font-size: var(--text-xl);
         color: var(--color-primary);
         letter-spacing: 0.02em;
+        text-decoration: none;
+
+        @include m.lg {
+            font-size: var(--text-2xl);
+        }
+    }
+
+    &__nav {
+        display: none;
+        gap: var(--spacing-md);
+
+        @include m.lg {
+            display: flex;
+        }
+    }
+
+    &__link {
+        font-family: var(--font-body);
+        font-size: var(--text-sm);
+        font-weight: 500;
+        color: var(--color-text);
+        text-decoration: none;
+        padding: 0.4rem 0.6rem;
+        border-radius: var(--radius-sm);
+        transition: color var(--transition-fast), background var(--transition-fast);
+
+        &:hover {
+            color: var(--color-primary);
+            background: rgba(107, 15, 26, 0.08);
+        }
+
+        &--active {
+            color: var(--color-primary);
+        }
     }
 
     &__cta {
@@ -42,12 +76,14 @@
         border-radius: 2rem;
         background: var(--color-primary);
         color: var(--color-text-light);
-        transition: background var(--transition-fast),
-            transform var(--transition-fast);
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background var(--transition-fast), transform var(--transition-fast);
 
         &:hover {
             background: var(--color-primary-dark);
             transform: translateY(-1px);
+            color: var(--color-text-light);
         }
     }
 }

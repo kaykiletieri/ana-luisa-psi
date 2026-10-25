@@ -1,12 +1,13 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { LucideAngularModule, Video } from 'lucide-angular';
 import { ScrollAnimateDirective } from '../../../core/directives/scroll-animate.directive';
-import { Whatsapp } from '../../../core/services/whatsapp';
+import { RouterLink } from '@angular/router';
+import { WhatsappService } from '../../../core/services/whatsapp';
 
 @Component({
   selector: 'app-online-service',
   standalone: true,
-  imports: [ScrollAnimateDirective, LucideAngularModule],
+  imports: [ScrollAnimateDirective, LucideAngularModule, RouterLink],
   templateUrl: './online-service.html',
   styleUrl: './online-service.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -14,7 +15,7 @@ import { Whatsapp } from '../../../core/services/whatsapp';
 export class OnlineService {
   readonly Video = Video;
 
-  constructor(private whatsapp: Whatsapp) { }
+  constructor(private whatsapp: WhatsappService) { }
 
   openWhatsApp(): void {
     this.whatsapp.open();
