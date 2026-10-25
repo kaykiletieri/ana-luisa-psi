@@ -51,7 +51,11 @@
       var redirect = sessionStorage.getItem('github-pages-redirect');
       if (redirect) {
         sessionStorage.removeItem('github-pages-redirect');
-        var url = window.location.origin + window.location.pathname.replace('index.html', '') + redirect;
+        var pathname = window.location.pathname;
+        var isProjectPages = pathname.startsWith('/ana-luisa-psi/');
+        var basePath = isProjectPages ? '/ana-luisa-psi' : '';
+        var cleanPath = pathname.replace(basePath + '/index.html', '').replace(basePath + '/', '');
+        var url = window.location.origin + basePath + '/' + redirect;
         window.history.replaceState(null, null, url);
       }
     })();
